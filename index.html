@@ -12,20 +12,21 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+     <style>
+      body,html {
+        margin:0;
+        padding:0;
+      }
+      canvas {
+        background-color: #1c1c1c;
+      }
+    </style>
       <div class ="wrap">
-      <img id="landing-splash" class ="my_image" src ="img/badger.png"/>
     </div>
-      <script src="js/chromata.min.js"></script>
-      <script>
-        var imageElement = document.querySelector('.my-image');
-        var chromata = new Chromata(imageElement);
-        console.log("initiated");
-        document.getElementById('landing-splash').addEventListener("click", function( event ) {
-          chromata.reset();
-          chromata.start();
-          console.log("tap");
-        }, false);
-        </script>
+    <canvas></canvas>
 
+      <script src="js/chromata.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+      <script src="js/main.js"></script>
     </body>
 </html>
